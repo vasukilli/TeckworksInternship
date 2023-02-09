@@ -1,0 +1,129 @@
+// Hotel Management micro project...
+
+start
+
+//in online the customer booking there table
+step 1: display "welcome to RK restaurant"
+step 2: display "register"
+step 3: read register 
+             1.sign in
+			 2.sign up
+step 4:if(register == sign up){
+        step:display enter phn_num
+		step:read phn_num
+		step:send OTP
+		    if(otp is valid for phn_num){
+		       step:display app homeScreen}
+		    else{
+		       step:display "invalid phn_num"}
+		 }else if(register == sign in){
+		   step:display enter phn_num;
+		   step:read phn_num
+		   if(phn_num is valid){
+		   step:enter to home screen}
+		   else{
+		   step:display "phn_num invalid"}
+		 }
+    }// now enter into the hotel_apps ,the customer early booking the table...
+
+step 5:display "Restaurent-availability"	
+step 6:display "Dashboards"
+step 7:read Dashboards
+            ->item_purchases_1
+			       item_purchases_2
+			->sales
+			->Restaurent_info
+			      1. Manager
+				  2. chefs
+				  3.tables
+				  4. timings
+			->food_categories
+			      1.veg_items
+				  2.nonVeg_items
+step 8:	if(customer_select == Dashboards){		
+step 9:  
+           if(Dashboards == item_purchases_1){
+          step:display "item_info with cost"
+		  step:read item_info and cost
+		                  1.chickenleg biryani - 500/-
+						  2.muttonDhum_biryani - 1000/-
+						  3.kadhakali chicken fry - 500/-
+						  
+						  if(customer_want == chicken biryani){
+						      step:display "pay ammount 500/-"}
+						  else if(customer_want == muttonDhum_biryani){
+						       step:display "pay amount of 1000/-"}
+						  else if(customer_want == kadhakali_chicken_fry){
+						      step:display "pay ammount 500/-"}
+						  else{
+						  step :display "no response from customer"}
+						  
+		  }	
+		  else if(Dashboards == item_purchases_2){
+		  step : display "snacks with cost"
+		  step:read snacks and cost
+		                  1.burger - 100/-
+						  2.pizza - 200/-
+						  3.drinks - 100/-
+		
+						  if(customer_want == burger){
+						      step:display "pay ammount 100/-"}
+						  else if(customer_want == pizza){
+						       step:display "pay amount of 200/-"}
+						  else if(customer_want == drinks){
+						      step:display "pay ammount 100/-"}
+						  else{
+						  step :display "no response from customer"}
+			}
+        	else if(Dashboard == Restaurent_info){
+			step: display "Restaurent information"
+			
+			       if(Restaurent_info == Manager)
+				   {
+				   step: check payment_section
+				   step: monitor to the employes
+				   step: check food availability
+				   }
+				   else if(Restaurent_info == chefs)
+				   {
+				   step: prepare food
+				   step: intimate food availability to the manager
+				   }
+				   else if(Restaurent_info == tables)
+				   {
+				   step: manager check availability of tables
+				   step: allocate customers to that reserved table
+				   }
+				   else if(Restaurent_info == timings)
+				   {
+				   step: display "open at 9AM'o' Clock"
+				   step: display "close at 9PM'O' Clock "
+				   }
+				   else{
+				   step : display "Restaurent information is not available"
+				   }
+			}else if( Restaurent_info == food_categories)
+			 step: display "food categories"
+			       
+				   if(food_categories == Veg_items)
+				   {
+				   step:display"panniru curry - 150/-
+				                kaju panniru - 200/-
+								meals - 100/-
+								veg fried-rice - 100/-"
+					}
+					else if(food_categories == non_veg items)
+					{
+					step: display "chicken-pakodi - 100/-
+					               mutton pakodi - 200/-
+								   frauns curry - 300/-"
+					}
+				}
+				else{
+				
+				step: display "no customer available in restuarent"
+				}
+		}
+		
+end
+								
