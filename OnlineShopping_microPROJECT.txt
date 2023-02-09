@@ -1,0 +1,116 @@
+// Online Shoping_MicroProject
+
+Begin
+step 1: display "Choose language"
+step 2: read choose language
+         ->Hindi     ->Marati
+		 ->Telugu    ->Kannada
+		 ->English
+		 ->Tamil
+		 ->Bengali
+step 3:display "Continue"
+step 4:read Continue
+step 5:display "login for enter phn_num"
+step 6:read phn_num
+step 7:if(phn_num is valid ){
+         step:generate OTP
+		 step:read OTP
+		 step:read login
+		 }else{
+		 step:display "login unsuccessful"
+	}
+
+step 8:display "search-Bar"
+step 9:read search-Bar
+step 10:display options
+             1.Home
+			 2.Categories
+			 3.Notifications
+			 4.Account
+			 5.Cart
+			 
+step 11: if(options == Home){
+            step : display "Recently viewed stores, sponsords , Discount for you etc"
+			step : read all items 
+			}
+			elseif(options == Categories){
+			step : display "All categories"
+			step : read offerZone
+			      if(offerZone is valid){
+				  step: display Some offer Products}
+				  else{
+				  step:no offers available
+				  }
+			step : read More on stores
+                   if(more on store is valid){
+				      step: display "coupons"
+				     step: read coupons}	
+                   else{
+					 step : display "coupons are not available"
+					 }				   
+			}step: Trending Stores
+			       if(trending stores is valid){
+				   step:display "trending stores are available"
+				   }else{
+				   step: display "not available"
+			}
+			
+			
+			elseif(options == orders){
+			    step : display "items with cost"
+				step : read items
+				if(order == confirm){
+				   step : display "NetBanking or CashOnDelivery"
+				   if(money == NetBanking){
+				   step: display "payment methods"
+				   step: read payment methods
+				   
+				         if(NetBanking == success){
+						 step : display "order confirmed"
+						 step : display order placed
+						 }
+					}
+					else if(money == CashOnDelivey){
+					 step:display get itemand pay money
+					}
+				}
+			
+			}
+			else if(order_item == damaged){
+			       if(order_item == returns){
+				      step : display "return ammount"
+					  step : call by cutomer-care to check the product
+					  step : display "Give feedback" 
+					  step : read feedback and approved to return.
+					  
+				   }else if(order_item == exchange){
+				      step : display "exchange product"
+					  step : read exchange product ammount
+					    if(exc_pro_ammount >= retutn ammount){
+						     step: display "exchange product approved"
+						}else{
+						     step: display " exchange product not approved"
+						}
+				   }
+			}
+			else if(options == Account){
+			   if(login is valid){
+			     step : display "enter phon_num"
+				 step : read phn_num
+				 step : display "enter otp"
+				 step : read otp
+				 }else{
+				 step:login unsuccessful
+				 }
+				 
+			
+			}
+			else{
+			 step : display "network problem"}
+    }
+			
+			
+}
+
+end
+		 
