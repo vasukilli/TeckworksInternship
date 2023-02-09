@@ -1,0 +1,101 @@
+//ATM Transaction process
+
+start
+
+step 1: display "welcome to the State Bank Of India"
+step 2: display "Insert ATM card"
+step 3: read debitcard
+step 4: if(debitcard is valid){
+        step:display "select language = Telugu or Hindi or English";
+		step:read language;
+		step:display "Account_type = savings or current"
+		
+step 5: read Account_type
+        step:if(Account_type == savings && Account_type == current){
+        step:display "bank_function"
+             "1.Deposit
+			 2.withdraw
+        	 3.Transfer	
+			 4.pinchange
+			 5.checkBalance
+			 6.others"}
+		 if(bank_function == Deposit){
+		  step:read amount to deposit
+		  if(amount>0){
+          step:read Account number
+  		  step:read pin
+		      if(pin == valid){
+		       step:display "successfully deposite"
+		       }
+		       else{
+		       step:display "invalid pin number"
+		       }
+			else{
+                step:display "transaction failed"			
+        }
+	}
+		
+		else if(bank_function == withdraw){
+		step : display "enter ammount(100,500,2000 available)"
+		step : read ammount
+		if(pin == valid){
+		    display "ammount"
+			step:display "transaction completed"
+			}
+			else{
+			display "invalid pin"
+			}
+	}
+	else if(bank_function == checkBalance){
+	     step : read pin
+		 if(pin==valid){
+		 display "balance"
+		 }
+		 else{
+		 display "invalid pin"
+		 }
+	}
+	else if(bank_function == Transfer){
+	     step : read account_numb
+		 if(account_num == valid){
+		 step:read ammount,actual_ammount
+		    if(ammount>0 and ammount<=actual_ammount){
+			step:display "enter pin number"
+			step:read pin
+			     if(pin==valid){
+				 step: display "transaction successfully"
+				 }else{
+				 step: display "transaction unsuccessfull"
+				}
+		 }		 
+		}
+	}
+	else if(bank_function == pinchange){
+	       step : display "account number"
+		   step : read account number
+		   if(account number == valid){
+		   step:display "enter mobile number"
+		   step:read mobile number
+		   step:display "enter OTP"
+		   step:read OTP
+		   step: display"enter new pin"
+		   step: read new pin}
+		   else{
+		   step:display "account number is invalid"
+		   }
+		   
+	}else if(bank_function == others){
+	step : display "bank services"
+	step : read bank services
+	        1.Tollfree numbers
+	}else{
+	step : display "invalid card"
+	}
+}
+
+end
+	
+		 
+	
+		  
+		
