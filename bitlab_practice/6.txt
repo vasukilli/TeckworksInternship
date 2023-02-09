@@ -1,0 +1,7 @@
+//simple intrest find out by using PTR/100 
+
+start
+step 1 : read p,t and r;
+step 2 : display mul_ptr = p*t*r;
+step 3 : display intrest = mul_ptr/100;
+end

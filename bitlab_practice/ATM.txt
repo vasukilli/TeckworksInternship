@@ -1,0 +1,69 @@
+//ATM transactions
+
+start
+
+step 1:click on the GUI(Graphical User Interface) screen for insert the ATM card;
+step 2:read user input is ATM card;
+step 3:select the language
+       display "telugu,hindi,english";
+step 4:Now select the different attributes like,
+       banking,
+       withdraw,
+       deposit,
+       pinchange,
+       check account
+//here each attribute perform different functions ,so we can select any one as our requaired
+
+step 5:now select one of the attribute is banking;
+step 6:now if(enter the PIN == valid){
+           display "withdraw amount";
+          //now you enter ammount and you got it;}
+           else if(bal ==0){
+           display "insufficiant fonds"
+          }else{
+         display "invalid pin";
+          //you cant withdraw money}
+step 7:transaction completed!!!....
+
+end
+
+.......................//.................
+
+//Library management System
+
+bigin
+
+step 1:read std.id;
+step 2:read n books information;
+step 2:each book contain diffent attributes;
+      step 2.1 :display "Author Name"
+      step 2.2 :display "book name"
+      step 2.3 :display "no.of pages"
+      step 2.4:display "cost"
+step 3:if(std.id is valid)
+       {
+       display "book attributes and select the wanted book";
+       }else{
+       display "std.id not valid"
+}
+
+end
+        
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

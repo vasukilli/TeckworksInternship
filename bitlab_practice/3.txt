@@ -1,0 +1,16 @@
+Flowchart Algorithms....
+
+start
+
+
+step 1 : read p1,p2,p3 and p4;
+step 2 : price = (p1+p2+p3+p4);
+step 3 : display price;
+         if(price<500)
+            display total= price*10/100;
+         else if(price<1000)
+            display total= price*20/100;
+         else if(price >1000)
+            display total = price*30/100;
+step 4 : return total;
+end

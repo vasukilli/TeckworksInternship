@@ -1,0 +1,120 @@
+x=10,y=34,z=21
+no output(false conditins)
+x=56,y=89,z=119
+no output(false conditions)
+x=0,y=-3,z=-5
+y divisible by 3
+z divisible by 5
+x=-12,y=30,z=-4
+y divisible by 3
+
+
+
+//write the algoritham to find given number is divisible by any even number or not
+
+start
+step 1:read any two numbers x,y
+step 2:if(y%2==0){
+       if(x%y==0)
+        display "the number divisible by even"
+       else
+        display "the number not divisible by even"
+      }else
+     { display "the divisor not an even number"
+}
+end
+
+
+
+//write the algoritham to find sum of first natural numbers
+
+start
+step 1: sum=0,i=1, read any number n;
+step 2:while(i<=n)
+       {
+         sum=sum+i;
+         i=+1;
+        }
+step 3: Display sum;
+end
+
+//find the sum of numbers which are divisible by 9 in the range of 40 t0 90
+
+start
+step 1: i=40,n=90,s=0;
+step2:while(i<=n)
+           {
+             if(i%9==0)
+            {
+              s=s+i
+              i=i+1
+            }
+          }
+step3:display s
+end
+
+........................
+start
+
+step1: i=1,read n,s=0
+
+step2: while(i<=n)
+
+           {​​​​​
+
+              s=s+(x^2)/i
+
+              i=i+1
+
+           }​​​​​  
+
+step3:display s
+
+stop
+
+..................
+
+start
+step 1 :sum = 0 ,read any number n;
+step 2 : while(num>0){
+         dig = num%10;
+         sum = sum+dig;
+         n = n/10;
+         }
+        n++;
+     print "sum";
+end
+........
+start
+step 1 : read any number n;
+step 2 : while(n>0){
+dig = n%10;
+if(dig%2==0){
+ print dig;
+}
+else{
+ print dig;
+}
+n=n/10;
+}
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

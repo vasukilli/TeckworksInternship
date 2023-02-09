@@ -1,0 +1,9 @@
+//display name and marks of subject
+begin/start
+
+step1: Display "Srilatha"
+step2:Display "marks of c is 0"
+step3: display marks  of m3 is 40
+step 4:diaply "marks of m1 is 40"
+
+end/stop

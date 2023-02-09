@@ -1,0 +1,11 @@
+//flowcharts..to get sum and average of 3 subjects
+begin/start
+
+step 1: read no ofsubjects ="M1 ,M2 and M3";
+step 2: read M1 = "input val1";
+step 3: read M2 = "input val2";
+step 4 : read M3 = "input val3";
+step 5 : print sum = M1 + M2 + M3;
+step 6 : print avg = sum/no of subjects;
+
+stop/end

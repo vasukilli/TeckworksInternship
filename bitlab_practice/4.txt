@@ -1,0 +1,13 @@
+start
+count = 1;
+repeat
+step 1 : read p1,p2,p3;
+step 2 : display price = p1+p2+p3;
+step 3 : if(price <500)
+         display price*10/100;
+         else if(price>500 and price<1000)
+         display price*20/100;
+step 4 : count = count+1;
+until(count <11);
+end
+         

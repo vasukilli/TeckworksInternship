@@ -1,0 +1,21 @@
+start
+count = 1
+repeat
+step 1:if(count==1)
+       display "Sunday"
+       else if(count == 2)
+       display "monday"
+       else if(count == 3)
+       display "tuesday"
+       else if(count == 4)
+       display "wednes day"
+       else if(count == 5)
+       display "thursday"
+       else if(count == 6)
+       display "friday"
+       else if(count == 7)
+       display "saturday"
+
+count = count + 1
+until(count <= 7)
+end
