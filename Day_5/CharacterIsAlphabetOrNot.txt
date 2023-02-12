@@ -1,0 +1,11 @@
+// character is alphabet or not
+
+start
+step 1: read any char c
+step 2: if(c >= 'a' and c<='z'){
+        display "this is alphabet"
+		}
+		else{
+		display "this is not a alphabet"
+		}
+end		

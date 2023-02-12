@@ -1,0 +1,20 @@
+// calculate grade points according 
+start
+step 1:read any 5 subjects marks
+             m1,m2,m3,m4,m5
+step 2 : read number of subjects
+step 3 : marks_sum = m1+m2+m3+m4+m5
+step 4 : display marks_percentage = (marks_sum/no.of subjects)	
+         if(marks_percentage >= 90){
+		 print "Grade A"}
+         else if(marks_percentage >= 80){
+		 print "Grade B"}
+          else if(marks_percentage >= 70){
+		 print "Grade C"}
+          else if(marks_percentage >= 60){
+		 print "Grade D"}
+          else if(marks_percentage >= 40){
+		 print "Grade E"}
+          else if(marks_percentage < 40){
+		 print "Grade F"}
+End		 

@@ -1,0 +1,16 @@
+// TO SOLVE QUADRATIC equations
+
+start
+step 1: read any a,b and c
+step 2: if(a>0){
+         roots = (sqrt(b*b - 4*a*c))/2a
+		 root_value = -b + roots
+		 display root_value
+		 }elseif(a>=0){
+		 roots = (sqrt(b*b - 4*a*c))/2a
+		 root_value = -b - roots
+		 display root_value
+		 }else{
+		  display "this is not a quadratic equation"}
+		  
+end		  

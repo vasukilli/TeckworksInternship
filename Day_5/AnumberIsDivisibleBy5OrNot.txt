@@ -1,0 +1,11 @@
+// A number is divisible by 5 or 11 ornot
+
+begin
+step 1: read any number n
+step 2: if(n%5== 0 and n%11==0){
+       display "the number is divisible by 5 and 11"
+	   }else{
+	    display "the number is not divisible by 5 and 11"
+		
+		}
+end		

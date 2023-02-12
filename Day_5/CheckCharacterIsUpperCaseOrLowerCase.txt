@@ -1,0 +1,10 @@
+// check wether the character is upper case or lower case letter
+
+start
+step 1 : read any char c
+step 2 : if( c >= 'a' and c <= 'z'){
+         display " this is lower case letter"}
+		 else{
+		 display " this is upper case letter"
+		 }
+end		 

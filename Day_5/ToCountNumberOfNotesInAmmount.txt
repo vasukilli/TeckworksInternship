@@ -1,0 +1,35 @@
+// to count number of notes in a given ammount
+
+start
+step 1: read ammount
+step 2: while(ammount > 0)
+        
+		if(ammount>=2000){
+		nm_2000 = ammount/2000
+		print nm_2000}
+		
+		if(ammount >= 500){
+		nm_500 = ammount/500
+		print nm_500}
+		
+		if(ammount >= 200){
+		nm_200 = ammount/200
+		print nm_200}
+		
+		if(ammount >= 100){
+		nm_100 = ammount/100
+		print nm_100}
+		
+		if(ammount >= 50){
+		nm_50 = ammount/50
+		print nm_50}
+		
+		if(ammount >= 20){
+		nm_20 = ammount/20
+		print nm_20}
+		
+		if(ammount >= 10){
+		nm_10 = ammount/10
+		print nm_10}
+		
+end

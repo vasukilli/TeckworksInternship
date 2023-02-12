@@ -1,0 +1,15 @@
+start
+step 1: read unit ,ammount ,surcharge
+step 2: if(unit <= 50){
+        ammount = unit*0.5
+} else if(unit<= 150){
+ammount = 25+(unit - 150)*1.20}
+else{
+ammount = 220(unit - 250)*1.50
+surcharge = ammount*0.20
+total ammount = ammount + surcharge
+}
+step : display electricity bill = %2f
+      total ammount
+end	  
+	  

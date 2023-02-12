@@ -1,0 +1,12 @@
+// check wether the alphabet voel or consonent
+
+start
+step 1: read any char c
+step 2: if( c == 'a' or c == 'e' or c == 'i' or c == 'o' or c == 'u'){
+         display "this is vowel"
+		 }else if(c == 'A' or c == 'E' or c == 'I' or c == 'O' or c == 'U'){
+		 display "this is vowel"
+		 }else{
+		 display "this  is consonent"
+		 }
+end		 

@@ -1,0 +1,12 @@
+// check whether the given character is alphabet ,digit or special character
+
+start
+step 1: read any character c
+step 2: if( (c >= 'a' and c <= 'z')or (c >= 'A' and c <= 'Z')){
+           display " this is alphabet"}
+		   else if( c >= '0' and c <= '9'){
+		   display "this is digit"}
+		   else{
+		   display "this is special_character"
+		   }
+end		   

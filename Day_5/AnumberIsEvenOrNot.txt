@@ -1,0 +1,10 @@
+// check wether the number is even or not
+
+start
+step 1: read any number n
+step 2: if(n%2 == 0){
+        display n " is even"}
+		else{
+		display n " is odd"}
+		
+end		

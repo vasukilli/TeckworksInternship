@@ -1,0 +1,9 @@
+// the year is leep_year or not
+
+begin
+step 1: read any year
+step 2: if(year % 4 == 0 or year % 400 == 0){
+        display year " is leep year"}else{
+		display year " is not leep year"
+		}
+end		

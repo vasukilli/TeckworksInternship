@@ -1,0 +1,21 @@
+// Calculate gross salary according to Da and HRA
+
+start
+step 1: read basic_salary
+step 2 : if(basic_salary <= 10000){
+           da = basic_salary * 80/100;
+		   HRA = basic_salary * 20/100;
+		}
+		else if(basic_salary <= 20000){
+		   da = basic_salary * 90/100;
+		   HRA = basic_salary * 25/100;}
+		 else{
+		   da = basic_salary * 95/100;
+		   HRA = basic_salary * 30/100;
+		   }
+		}
+STEP 3:	gross_salary = basic_salary + da + HRA;
+step 4 : display gross_salary
+end
+		   
+		   

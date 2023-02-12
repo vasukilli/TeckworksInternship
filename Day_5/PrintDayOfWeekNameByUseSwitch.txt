@@ -1,0 +1,24 @@
+/to print day of week name using switch case
+
+start
+step 1 : read any day_num
+step 2 : switch(day_num)
+         case 1 : display "Monday"
+		 break
+		 case 2 : display "tuesdat"
+		 break
+		 case 3 : display "wednesday"
+		 break
+		 case 4 : display "thrusday"
+		 break
+		 case 5 : display "friday"
+		 break
+		 case 6 : display "saturday"
+		 break
+		 case 7 : display "sunday"
+		 break
+		 case 
+		 display " invalid week name"
+		 
+end		 
+		 

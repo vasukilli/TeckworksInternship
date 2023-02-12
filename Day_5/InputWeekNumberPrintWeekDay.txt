@@ -1,0 +1,23 @@
+// to input week number print week day
+
+start
+step 1: read any number n
+step 2: while(n>0){
+        if(n==1){
+		display " monday"}
+		else if(n==2){
+		display " tuesday"}
+		else if(n==3){
+		display " wednesday"}
+		else if(n==4){
+		display " thrusday"}
+		else if(n==5){
+		display " friday"}
+		else if(n==6){
+		display " saturday"}
+		else if(n==7){
+		display " sunday"}
+		else{
+		display "invalid week"}
+		}
+end		
