@@ -1,0 +1,354 @@
+Grand Test-2 
+
+The Grand Test-2 is divided into three sections. For the first section, two questions need to be completed. For the second section, any two questions need to be completed. And for the third section, any one question needs to be completed. Each question carries a score of 20 marks. Total duration is: 3 hours. All the best. 
+
+Section - 1:   - 40 marks 
+
+Program 1: 
+
+Sophie, a college student, urgently needs cash to buy her textbooks. She heads to the nearest ATM to withdraw money. The ATM allows withdrawal of denominations 500, 200, and 100. However, Sophie needs a specific amount of money and wants to withdraw it with the minimum number of notes. 
+
+The ATM will only dispense money if the requested amount is a multiple of 100. 
+
+If Sophie needs to withdraw Rs. 3700 from the ATM, how many minimum notes of denominations 500, 200, and 100 will she get? Can you write a program to calculate the minimum number of notes required to dispense the requested amount? 
+
+Input Format 
+
+2400 (integer value) 
+
+Constraints 
+
+100<= amount <=10000  
+
+Entered amount should be positive and only Integers. 
+
+Output Format 
+
+3 (integer value) 
+
+Sample Input 0: 
+
+3700 
+
+Sample Output 0: 
+
+8 
+
+Sample Input 1: 
+
+750 
+
+Sample Output 1: 
+
+Entered Amount must be multiples of 100 
+
+ 
+ 
+
+Program 2: 
+
+You are working on a project that involves analyzing data from sensors installed on a wind turbine. The data is stored in an array, and you have noticed that the data has a periodic pattern that repeats every n data points, where n is a positive integer. To better analyze the data, You need to shift the elements in the array to the left by m positions, such that the first m elements are moved to the end of the array, and the remaining elements are shifted to the left by m positions, such that the original mth element becomes the first element in the new array. 
+
+Implement a Java program to achieve above? 
+
+Input Format 
+
+The input consists of Three lines  
+
+The first line contains integer n, where n is the length of the array (1 ≤ n ≤ 10^5)  
+
+The Second line contains n space-separated integers a1, a2, ..., an representing the array of integers (-10^9 ≤ ai ≤ 10^9). 
+
+The Third line contains integer  m(1 ≤m ≤ 10^5), 
+
+Output Format 
+
+The output is the modified Array satisfying the above requirements. 
+
+Sample Input1 : 
+
+10 
+
+1 2 3 4 5 6 7 8 9 10 
+
+4 
+
+Sample Output1: 
+
+5 6 7 8 9 10 1 2 3 4 
+
+Sample Input2 : 
+
+10 
+
+1 2 3 4 5 6 7 8 9 10 
+
+2 
+
+Sample Output2 
+
+3 4 5 6 7 8 9 10 1 2 
+
+ 
+
+Program 3: 
+
+You are working on a project that involves developing a tool to analyze stock prices for a client. The tool takes in an array of integers, where each integer represents the closing price of a stock on a given day. The client has requested a feature that allows them to find pairs of days where the closing prices add up to a specific target value. The goal is to help the client identify potential trading opportunities. 
+
+Implement a Java program to find pairs of indices in an array of integers where the values at those indices add up to a specific target value? 
+
+ 
+
+Input Format: 
+
+The input consists of Three lines: 
+
+The first line contains  integer n, where n is the length of the array (1 ≤ n ≤ 10^5)  
+
+The Second line contains n space-separated integers a1, a2, ..., an representing the array of integers (-10^9 ≤ ai ≤ 10^9). 
+
+The Third line contains integer targetValue (1 ≤ targetValue ≤ 10^9). 
+
+Output Format: 
+
+If there exist one or more pairs of indices in the array whose values add up to targetValue, the output should consist of one or more lines, each containing two space-separated integers i and j, representing the indices of the two elements whose sum is equal to targetValue. 
+
+If no such pair exists, the output should consist of one line containing the string "No pair found". 
+
+Sample Input 1: 
+
+6 
+
+10  7  5  8  11  9 
+
+16 
+
+Sample Output1: 
+
+5 
+
+4 
+
+Sample Input 2: 
+
+6 
+
+10 7 5 8  11 9 
+
+30 
+
+Sample Output2: 
+
+No pair found 
+
+ 
+
+Section-2: (40 marks) 
+
+Program 4: 
+
+Once upon a time, there was a language learner who wanted to improve their vocabulary and creativity. They decided to create a program that would allow them to practice filling in the blanks of a story with different adjectives, nouns, and other words. 
+
+The language learner first came up with a story that had some missing words. The story went like this:  
+
+"[noun] was really [adjective] today. We learned how to write [activity] today. I can't wait for tomorrow!" 
+
+Now your task is to create a program that would prompt the user to enter different types of words such as a noun, an adjective, and an activity. Once the user entered the words, the program would insert them into the story and print out the full story with the inserted words. 
+
+For example, if the user entered "Java class" for the class name, "HAPPY" for the adjective, and "programs" for the activity. The program then printed out the story with the inserted words like this: 
+
+ "Class was really Happy today. We learned how to write programs today. I can't wait for tomorrow!" 
+
+ 
+
+Input Format: 
+
+The program prompts the user to enter three pieces of information, each on a separate line: 
+
+A noun (a string). 
+
+An adjective (a string). 
+
+An activity (a string). 
+
+The program expects the user to enter each piece of information on a new line. 
+
+ 
+
+Output Format: 
+
+After the user has entered the three pieces of information, the program inserts them into the following story template: 
+
+[noun] was really [adjective] today. We learned how to write [activity] today. I can't wait for tomorrow! 
+
+ 
+
+Sample Input 1: 
+
+class 
+
+Happy 
+
+programs 
+
+ 
+
+Sample Output1: 
+
+java class was really Happy today. We learned how to write java programs today. I can't wait for tomorrow! 
+
+ 
+
+Sample Input 2: 
+
+bitLabs 
+
+exciting 
+
+code 
+
+Sample Output 2: 
+
+bitLabs was really exciting today. We learned how to write java code today in class. I can't wait for tomorrow! 
+
+ 
+
+Program 5: 
+
+As a security analyst, you need to send a confidential message to your colleague without anyone being able to intercept it. You remember a simple way to encrypt a message by rearranging its characters. You decide to write a program to quickly encrypt your message. 
+
+The program takes the string you entered and applies the encryption method of selecting even-indexed characters first, followed by odd-indexed characters. The encrypted string is displayed on the screen. 
+
+Write a program that asks the user for a string and uses this method to encrypt the string 
+
+Input format: 
+
+The program prompts the user to enter a message to encrypt. The input should be a string containing a message to encrypt. 
+
+Output format: 
+
+The program outputs the encrypted message by selecting even-indexed characters first, followed by odd-indexed characters. The output is a string containing the encrypted message. 
+
+Sample Input1: 
+
+message 
+
+Sample Output1: 
+
+msaeesg 
+
+Sample Input2 
+
+Meet me tonight at the park 
+
+Sample Output2: 
+
+Me etngta h aketm oih ttepr 
+
+Program 6: 
+
+Ravi is a huge fan of the Chennai Super Kings and was very excited to get tickets for their first match after a two-year hiatus. On the ticket, there is a code that can be represented as a string of upper-case Latin letters. 
+
+Ravi has a superstition that the CSK Team will win the match if the code contains exactly three different letters that alternate. Given the ticket code, determine if Ravi’s superstition is correct or not. Print "YES" or "NO" (without quotes) corresponding to the situation. 
+
+Input Format 
+
+Only one line of the input contains a string S denoting the letter code on the ticket. 
+
+Constraints 
+
+0<= S.length() <=15 ,   
+
+String must contain only alphabets 
+
+Output Format 
+
+Output a single line containing "Yes" (without quotes) based on the conditions given and "No" otherwise. Refer sample input and output for formatting specifications. 
+
+Sample Input 0 
+
+ABCABCABC 
+
+Sample Output 0 
+
+YES 
+
+Sample Input 1 
+
+ABBC 
+
+Sample Output 1 
+
+NO 
+
+ 
+
+ 
+
+Section –3 : (20 Marks) 
+
+ 
+ 
+
+Program 7: 
+
+"Brave Author" Slogan Writing Competition was organized for School students at Hyderabad Senior School. Any student who is creative and effective in communicating ideas in short, yet powerful about any instant topic can participate in the competition. The important guideline for the contest is that the Slogan should contain a string where the number of occurrences of any one character in it is equal to the sum of the numbers of occurrences of other characters in the string. 
+
+Write a program to help the event organizers to determine whether the submitted Slogans adhere to the given condition. 
+
+Input Format 
+
+First and only line of input contains one string S consisting of lowercase letters. 
+
+Constraints 
+
+0<= s.length <=20, String must contain only alphabets. 
+
+Output Format 
+
+Output a single line containing "Yes"(without quotes) if the string satisfies the condition given above or "No"(without quotes) otherwise. Refer sample input and output for formatting specifications. 
+
+Sample Input 0 
+
+acab 
+
+Sample Output 0 
+
+YES (explanation: here frequency of one of the character ‘a’ is 2 ,frequency of  the character ‘b’ is 1 and frequency of the character ‘c’ is 1. so frequency of one of the character ‘a’  is equal to the sum of frequencies of other two characters ‘b’ and ‘c’) 
+
+Sample Input 1 
+
+abc 
+
+Sample Output 1 
+
+NO 
+
+ 
+
+ 
+Program 8: 
+
+Given  a string S of length N, an integer M.=2  
+
+Task 1 : The task is to write a method that encrypts this string using Matrix according to the  below given encryption technique and then prints it.  
+
+  
+
+Encryption Technique: 
+
+ The original string is placed in a Matrix of M rows and N/M columns(N/M should be rounded to next integer i.e., 11/2=5.5 which is rounded to 6), such that the first character of the Original text or string is placed on the top-left cell to the bottom-right manner. If the last row is reached, then again go to the top row, and start from the next column. For example: If string is “geeks”, M = 2, then the string will be encrypted in below manner 
+
+ 
+
+Now  traverse the matrix row wise and print the characters as they appear 
+
+Sample Input1:  
+
+geeks 
+
+Sample Output1:  
+
+ges  ek 
+
+ 
