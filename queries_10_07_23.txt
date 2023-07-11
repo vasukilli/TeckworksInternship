@@ -1,0 +1,511 @@
+Enter password: ****
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 11
+Server version: 5.5.16 MySQL Community Server (GPL)
+
+Copyright (c) 2000, 2011, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| evoting            |
+| heroes             |
+| mysql              |
+| performance_schema |
+| ramanujan4         |
+| vasu_database      |
++--------------------+
+7 rows in set (0.02 sec)
+
+mysql> create table karunakar;
+ERROR 1046 (3D000): No database selected
+mysql> create database shop;
+Query OK, 1 row affected (0.02 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| evoting            |
+| heroes             |
+| mysql              |
+| performance_schema |
+| ramanujan4         |
+| shop               |
+| vasu_database      |
++--------------------+
+8 rows in set (0.00 sec)
+
+mysql> use shop;
+Database changed
+mysql> create table customers(customer_id int(20),first_name varchar(20),last_name varchar(20),age int(20),country varchar(20));
+Query OK, 0 rows affected (0.07 sec)
+
+mysql> desc customers;
++-------------+-------------+------+-----+---------+-------+
+| Field       | Type        | Null | Key | Default | Extra |
++-------------+-------------+------+-----+---------+-------+
+| customer_id | int(20)     | YES  |     | NULL    |       |
+| first_name  | varchar(20) | YES  |     | NULL    |       |
+| last_name   | varchar(20) | YES  |     | NULL    |       |
+| age         | int(20)     | YES  |     | NULL    |       |
+| country     | varchar(20) | YES  |     | NULL    |       |
++-------------+-------------+------+-----+---------+-------+
+5 rows in set (0.05 sec)
+
+mysql> create table customers(customer_id int(20) primary key,first_name varchar(20),last_name varchar(20),age int(20),country varchar(20));
+ERROR 1050 (42S01): Table 'customers' already exists
+mysql> create table orders(order_id int(20) PRIMARY KEY,item varchar(20),amount int(20),customer_id int(20),FOREIGN KEY (customer_id) REFERENCES coustemes(customer_id) );
+ERROR 1005 (HY000): Can't create table 'shop.orders' (errno: 150)
+mysql> create table customers(customer_id int(20) primary key,first_name varchar(20),last_name varchar(20),age int(20),country varchar(20));
+ERROR 1050 (42S01): Table 'customers' already exists
+mysql> drop table customers;
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> create table customers(customer_id int(20) primary key,first_name varchar(20),last_name varchar(20),age int(20),country varchar(20));
+Query OK, 0 rows affected (0.05 sec)
+
+mysql> create table orders(order_id int primary key,item varchar(20),amount int(20),customer_id int(20),FOREIGN KEY (customer_id) REFERENCES customers(customer_id));
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> create table shippings(shipping_id int primary key,status varchar(20),customer int(20),FOREIGN KEY (customer) REFERENCES customers(customer_id));
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> desc customers;
++-------------+-------------+------+-----+---------+-------+
+| Field       | Type        | Null | Key | Default | Extra |
++-------------+-------------+------+-----+---------+-------+
+| customer_id | int(20)     | NO   | PRI | NULL    |       |
+| first_name  | varchar(20) | YES  |     | NULL    |       |
+| last_name   | varchar(20) | YES  |     | NULL    |       |
+| age         | int(20)     | YES  |     | NULL    |       |
+| country     | varchar(20) | YES  |     | NULL    |       |
++-------------+-------------+------+-----+---------+-------+
+5 rows in set (0.04 sec)
+
+mysql> desc orders;
++-------------+-------------+------+-----+---------+-------+
+| Field       | Type        | Null | Key | Default | Extra |
++-------------+-------------+------+-----+---------+-------+
+| order_id    | int(11)     | NO   | PRI | NULL    |       |
+| item        | varchar(20) | YES  |     | NULL    |       |
+| amount      | int(20)     | YES  |     | NULL    |       |
+| customer_id | int(20)     | YES  | MUL | NULL    |       |
++-------------+-------------+------+-----+---------+-------+
+4 rows in set (0.02 sec)
+
+mysql> desc shippings;
++-------------+-------------+------+-----+---------+-------+
+| Field       | Type        | Null | Key | Default | Extra |
++-------------+-------------+------+-----+---------+-------+
+| shipping_id | int(11)     | NO   | PRI | NULL    |       |
+| status      | varchar(20) | YES  |     | NULL    |       |
+| customer    | int(20)     | YES  | MUL | NULL    |       |
++-------------+-------------+------+-----+---------+-------+
+3 rows in set (0.02 sec)
+
+mysql> insert into customers values(1,"john",'doe',31,'usa'),(2,'robert','luna',22,'usa'),(3,'david','robinsion',22,'uk'),(4,'john','reinhardt',25,'uk'),(5,'betty','doe',28,'uae');
+
+Query OK, 5 rows affected (0.02 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+mysql> select * from customers;
++-------------+------------+-----------+------+---------+
+| customer_id | first_name | last_name | age  | country |
++-------------+------------+-----------+------+---------+
+|           1 | john       | doe       |   31 | usa     |
+|           2 | robert     | luna      |   22 | usa     |
+|           3 | david      | robinsion |   22 | uk      |
+|           4 | john       | reinhardt |   25 | uk      |
+|           5 | betty      | doe       |   28 | uae     |
++-------------+------------+-----------+------+---------+
+5 rows in set (0.01 sec)
+
+mysql> insert into orders values(1,"keyboard",400,4),(2,'mouse',300,4),(3,'monitor',12000,3),(4,'keyboard',400,1),(5,'mousepad',400,4);inhardt',25,'uk'),(5,'betty','doe',28,'uae');
+
+Query OK, 5 rows affected (0.04 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+    '> select * from orders;
+    '> /
+    '> /temp
+    '> Enter password: ****
+    '> Welcome to the MySQL monitor.  Commands end with ; or \g.
+    '> Your MySQL connection id is 11
+    '> Server version: 5.5.16 MySQL Community Server (GPL)
+    '>
+    '> Copyright (c) 2000, 2011, Oracle and/or its affiliates. All rights reserved.
+    '>
+    '> Oracle is a registered trademark of Oracle Corporation and/or its
+    '> affiliates. Other names may be trademarks of their respective
+    '> owners.
+    '>
+    '> Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'inhardt',25,'uk'),(5,'bet
+ty','doe',28,'uae');
+select * from orders;
+/
+/temp
+Ente' at line 1
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\c' to clear the current
+input statement.'' at line 1
+    ->
+    -> mysql> show databases;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' or '
+
+mysql> show databases' at line 1
+mysql> +--------------------+
+    -> | Database           |
+    -> +--------------------+
+    -> | information_schema |
+    -> | evoting            |
+    -> | heroes             |
+    -> | mysql              |
+    -> | performance_schema |
+    -> | ramanujan4         |
+    -> | vasu_database      |
+    -> +--------------------+
+    -> 7 rows in set (0.02 sec)
+    ->
+    -> mysql> create table karunakar;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '+--------------------+
+| Database           |
++--------------------+
+| informati' at line 1
+mysql> ERROR 1046 (3D000): No database selected
+    -> mysql> create database shop;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ERROR 1046 (3D000): No da
+tabase selected
+mysql> create database shop' at line 1
+mysql> Query OK, 1 row affected (0.02 sec)
+    ->
+    -> mysql> show databases;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Query OK, 1 row affected
+(0.02 sec)
+
+mysql> show databases' at line 1
+mysql> +--------------------+
+    -> | Database           |
+    -> +--------------------+
+    -> | information_schema |
+    -> | evoting            |
+    -> | heroes             |
+    -> | mysql              |
+    -> | performance_schema |
+    -> | ramanujan4         |
+    -> | shop               |
+    -> | vasu_database      |
+    -> +--------------------+
+    -> 8 rows in set (0.00 sec)
+    ->
+    -> mysql> use shop;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '+--------------------+
+| Database           |
++--------------------+
+| informati' at line 1
+mysql> Database changed
+    -> mysql> create table customers(customer_id int(20),first_name varchar(20),last_name varchar(20),age int(20),country varchar(20));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Database changed
+mysql> create table customers(customer_id int(20),first_name va' at line 1
+mysql> Query OK, 0 rows affected (0.07 sec)
+    ->
+    -> mysql> desc customers;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Query OK, 0 rows affected
+ (0.07 sec)
+
+mysql> desc customers' at line 1
+mysql> +-------------+-------------+------+-----+---------+-------+
+    -> | Field       | Type        | Null | Key | Default | Extra |
+    -> +-------------+-------------+------+-----+---------+-------+
+    -> | customer_id | int(20)     | YES  |     | NULL    |       |
+    -> | first_name  | varchar(20) | YES  |     | NULL    |       |
+    -> | last_name   | varchar(20) | YES  |     | NULL    |       |
+    -> | age         | int(20)     | YES  |     | NULL    |       |
+    -> | country     | varchar(20) | YES  |     | NULL    |       |
+    -> +-------------+-------------+------+-----+---------+-------+
+    -> 5 rows in set (0.05 sec)
+    ->
+    -> mysql> create table customers(customer_id int(20) primary key,first_name varchar(20),last_name varchar(20),age int(20),country varchar(20));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '+-------------+----------
+---+------+-----+---------+-------+
+| Field       | Typ' at line 1
+mysql> ERROR 1050 (42S01): Table 'customers' already exists
+    -> mysql> create table orders(order_id int(20) PRIMARY KEY,item varchar(20),amount int(20),customer_id int(20),FOREIGN KEY (customer_id) REFERENCES coustemes(customer_id) );
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ERROR 1050 (42S01): Table
+ 'customers' already exists
+mysql> create table orders(' at line 1
+mysql> ERROR 1005 (HY000): Can't create table 'shop.orders' (errno: 150)
+    '> mysql> create table customers(customer_id int(20) primary key,first_name varchar(20),last_name varchar(20),age int(20),country varchar(20));
+    '> ERROR 1050 (42S01): Table 'customers' already exists
+    '> mysql> drop table customers;
+    '> Query OK, 0 rows affected (0.01 sec)
+    '>
+    '> mysql> create table customers(customer_id int(20) primary key,first_name varchar(20),last_name varchar(20),age int(20),country varchar(20));
+    '> Query OK, 0 rows affected (0.05 sec)
+    '>
+    '> mysql> create table orders(order_id int primary key,item varchar(20),amount int(20),customer_id int(20),FOREIGN KEY (customer_id) REFERENCES customers(customer_id));
+    '> Query OK, 0 rows affected (0.03 sec)
+    '>
+    '> mysql> create table shippings(shipping_id int primary key,status varchar(20),customer int(20),FOREIGN KEY (customer) REFERENCES customers(customer_id));
+    '> Query OK, 0 rows affected (0.02 sec)
+    '>
+    '> mysql> desc customers;
+    '> +-------------+-------------+------+-----+---------+-------+
+    '> | Field       | Type        | Null | Key | Default | Extra |
+    '> +-------------+-------------+------+-----+---------+-------+
+    '> | customer_id | int(20)     | NO   | PRI | NULL    |       |
+    '> | first_name  | varchar(20) | YES  |     | NULL    |       |
+    '> | last_name   | varchar(20) | YES  |     | NULL    |       |
+    '> | age         | int(20)     | YES  |     | NULL    |       |
+    '> | country     | varchar(20) | YES  |     | NULL    |       |
+    '> +-------------+-------------+------+-----+---------+-------+
+    '> 5 rows in set (0.04 sec)
+    '>
+    '> mysql> desc orders;
+    '> +-------------+-------------+------+-----+---------+-------+
+    '> | Field       | Type        | Null | Key | Default | Extra |
+    '> +-------------+-------------+------+-----+---------+-------+
+    '> | order_id    | int(11)     | NO   | PRI | NULL    |       |
+    '> | item        | varchar(20) | YES  |     | NULL    |       |
+    '> | amount      | int(20)     | YES  |     | NULL    |       |
+    '> | customer_id | int(20)     | YES  | MUL | NULL    |       |
+    '> +-------------+-------------+------+-----+---------+-------+
+    '> 4 rows in set (0.02 sec)
+    '>
+    '> mysql> desc shippings;
+    '> +-------------+-------------+------+-----+---------+-------+
+    '> | Field       | Type        | Null | Key | Default | Extra |
+    '> +-------------+-------------+------+-----+---------+-------+
+    '> | shipping_id | int(11)     | NO   | PRI | NULL    |       |
+    '> | status      | varchar(20) | YES  |     | NULL    |       |
+    '> | customer    | int(20)     | YES  | MUL | NULL    |       |
+    '> +-------------+-------------+------+-----+---------+-------+
+    '> 3 rows in set (0.02 sec)
+    '>
+    '> mysql> insert into customers values(1,"john",'doe',31,'usa'),(2,'robert','luna',22,'usa'),(3,'david','robinsion',22,'uk'),(4,'john','reinhardt',25,'uk'),(5,'betty','doe',28,
+'uae');
+    '>
+    '> Query OK, 5 rows affected (0.02 sec)
+    '> Records: 5  Duplicates: 0  Warnings: 0
+    '>
+    '> mysql> select * from customers;
+    '> +-------------+------------+-----------+------+---------+
+    '> | customer_id | first_name | last_name | age  | country |
+    '> +-------------+------------+-----------+------+---------+
+    '> |           1 | john       | doe       |   31 | usa     |
+    '> |           2 | robert     | luna      |   22 | usa     |
+    '> |           3 | david      | robinsion |   22 | uk      |
+    '> |           4 | john       | reinhardt |   25 | uk      |
+    '> |           5 | betty      | doe       |   28 | uae     |
+    '> +-------------+------------+-----------+------+---------+
+    '> 5 rows in set (0.01 sec)
+    '>
+    '> mysql> insert into orders values(1,"keyboard",400,4),(2,'mouse',300,4),(3,'monitor',12000,3),(4,'keyboard',400,1),(5,'mousepad',400,4);inhardt',25,'uk'),(5,'betty','doe',28,
+'uae');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ERROR 1005 (HY000): Can't
+ create table 'shop.orders' (errno: 150)
+mysql> create ' at line 1
+mysql>
+mysql> Query OK, 5 rows affected (0.04 sec)
+    -> Records: 5  Duplicates: 0  Warnings: 0
+    ->
+    ->     '> select * from orders;
+    '>     '> /
+    ->     '> /temp
+    '>     '>Enter password: ****
+    -> Welcome to the MySQL monitor.  Commands end with ; or \g.
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Query OK, 5 rows affected
+ (0.04 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+   ' at line 1
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'or' at line 1
+    -> Your MySQL connection id is 11
+    -> Server version: 5.5.16 MySQL Community Server (GPL)
+    ->
+    -> Copyright (c) 2000, 2011, Oracle and/or its affiliates. All rights reserved.
+    ->
+    -> Oracle is a registered trademark of Oracle Corporation and/or its
+    -> affiliates. Other names may be trademarks of their respective
+    -> owners.
+    ->
+    -> Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+    ->
+    -> mysql> show databases;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.
+Your MySQL connection id is 11
+Server version: 5.5.16 MySQL Community Server (' at line 1
+mysql> +--------------------+
+    -> | Database           |
+    -> +--------------------+
+    -> | information_schema |
+    -> | evoting            |
+    -> | heroes             |
+    -> | mysql              |
+    -> | performance_schema |
+    -> | ramanujan4         |
+    -> | vasu_database      |
+    -> +--------------------+
+    -> 7 rows in set (0.02 sec)
+    ->
+    -> mysql> create table karunakar;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '+--------------------+
+| Database           |
++--------------------+
+| informati' at line 1
+mysql> ERROR 1046 (3D000): No database selected
+    -> mysql> create database shop;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ERROR 1046 (3D000): No da
+tabase selected
+mysql> create database shop' at line 1
+mysql> Query OK, 1 row affected (0.02 sec)
+    ->
+    -> mysql> show databases;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Query OK, 1 row affected
+(0.02 sec)
+
+mysql> show databases' at line 1
+mysql> +--------------------+
+    -> | Database           |
+    -> +--------------------+
+    -> | information_schema |
+    -> | evoting            |
+    -> | heroes             |
+    -> | mysql              |
+    -> | performance_schema |
+    -> | ramanujan4         |
+    -> | shop               |
+    -> | vasu_database      |
+    -> +--------------------+
+    -> 8 rows in set (0.00 sec)
+    ->
+    -> mysql> use shop;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '+--------------------+
+| Database           |
++--------------------+
+| informati' at line 1
+mysql> Database changed
+    -> mysql> create table customers(customer_id int(20),first_name varchar(20),last_name varchar(20),age int(20),country varchar(20));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Database changed
+mysql> create table customers(customer_id int(20),first_name va' at line 1
+mysql> Query OK, 0 rows affected (0.07 sec)
+    ->
+    -> mysql> desc customers;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Query OK, 0 rows affected
+ (0.07 sec)
+
+mysql> desc customers' at line 1
+mysql> +-------------+-------------+------+-----+---------+-------+
+    -> | Field       | Type        | Null | Key | Default | Extra |
+    -> +-------------+-------------+------+-----+---------+-------+
+    -> | customer_id | int(20)     | YES  |     | NULL    |       |
+    -> | first_name  | varchar(20) | YES  |     | NULL    |       |
+    -> | last_name   | varchar(20) | YES  |     | NULL    |       |
+    -> | age         | int(20)     | YES  |     | NULL    |       |
+    -> | country     | varchar(20) | YES  |     | NULL    |       |
+    -> +-------------+-------------+------+-----+---------+-------+
+    -> 5 rows in set (0.05 sec)
+    ->
+    -> mysql> create table customers(customer_id int(20) primary key,first_name varchar(20),last_name varchar(20),age int(20),country varchar(20));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '+-------------+----------
+---+------+-----+---------+-------+
+| Field       | Typ' at line 1
+mysql> ERROR 1050 (42S01): Table 'customers' already exists
+    -> mysql> create table orders(order_id int(20) PRIMARY KEY,item varchar(20),amount int(20),customer_id int(20),FOREIGN KEY (customer_id) REFERENCES coustemes(customer_id) );
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ERROR 1050 (42S01): Table
+ 'customers' already exists
+mysql> create table orders(' at line 1
+mysql> ERROR 1005 (HY000): Can't create table 'shop.orders' (errno: 150)
+    '> mysql> create table customers(customer_id int(20) primary key,first_name varchar(20),last_name varchar(20),age int(20),country varchar(20));
+    '> ERROR 1050 (42S01): Table 'customers' already exists
+    '> mysql> drop table customers;
+    '> Query OK, 0 rows affected (0.01 sec)
+    '>
+    '> mysql> create table customers(customer_id int(20) primary key,first_name varchar(20),last_name varchar(20),age int(20),country varchar(20));
+    '> Query OK, 0 rows affected (0.05 sec)
+    '>
+    '> mysql> create table orders(order_id int primary key,item varchar(20),amount int(20),customer_id int(20),FOREIGN KEY (customer_id) REFERENCES customers(customer_id));
+    '> Query OK, 0 rows affected (0.03 sec)
+    '>
+    '> mysql> create table shippings(shipping_id int primary key,status varchar(20),customer int(20),FOREIGN KEY (customer) REFERENCES customers(customer_id));
+    '> Query OK, 0 rows affected (0.02 sec)
+    '>
+    '> mysql> desc customers;
+    '> +-------------+-------------+------+-----+---------+-------+
+    '> | Field       | Type        | Null | Key | Default | Extra |
+    '> +-------------+-------------+------+-----+---------+-------+
+    '> | customer_id | int(20)     | NO   | PRI | NULL    |       |
+    '> | first_name  | varchar(20) | YES  |     | NULL    |       |
+    '> | last_name   | varchar(20) | YES  |     | NULL    |       |
+    '> | age         | int(20)     | YES  |     | NULL    |       |
+    '> | country     | varchar(20) | YES  |     | NULL    |       |
+    '> +-------------+-------------+------+-----+---------+-------+
+    '> 5 rows in set (0.04 sec)
+    '>
+    '> mysql> desc orders;
+    '> +-------------+-------------+------+-----+---------+-------+
+    '> | Field       | Type        | Null | Key | Default | Extra |
+    '> +-------------+-------------+------+-----+---------+-------+
+    '> | order_id    | int(11)     | NO   | PRI | NULL    |       |
+    '> | item        | varchar(20) | YES  |     | NULL    |       |
+    '> | amount      | int(20)     | YES  |     | NULL    |       |
+    '> | customer_id | int(20)     | YES  | MUL | NULL    |       |
+    '> +-------------+-------------+------+-----+---------+-------+
+    '> 4 rows in set (0.02 sec)
+    '>
+    '> mysql> desc shippings;
+    '> +-------------+-------------+------+-----+---------+-------+
+    '> | Field       | Type        | Null | Key | Default | Extra |
+    '> +-------------+-------------+------+-----+---------+-------+
+    '> | shipping_id | int(11)     | NO   | PRI | NULL    |       |
+    '> | status      | varchar(20) | YES  |     | NULL    |       |
+    '> | customer    | int(20)     | YES  | MUL | NULL    |       |
+    '> +-------------+-------------+------+-----+---------+-------+
+    '> 3 rows in set (0.02 sec)
+    '>
+    '> mysql> insert into customers values(1,"john",'doe',31,'usa'),(2,'robert','luna',22,'usa'),(3,'david','robinsion',22,'uk'),(4,'john','reinhardt',25,'uk'),(5,'betty','doe',28,
+'uae');
+    '>
+    '> Query OK, 5 rows affected (0.02 sec)
+    '> Records: 5  Duplicates: 0  Warnings: 0
+    '>
+    '> mysql> select * from customers;
+    '> +-------------+------------+-----------+------+---------+
+    '> | customer_id | first_name | last_name | age  | country |
+    '> +-------------+------------+-----------+------+---------+
+    '> |           1 | john       | doe       |   31 | usa     |
+    '> |           2 | robert     | luna      |   22 | usa     |
+    '> |           3 | david      | robinsion |   22 | uk      |
+    '> |           4 | john       | reinhardt |   25 | uk      |
+    '> |           5 | betty      | doe       |   28 | uae     |
+    '> +-------------+------------+-----------+------+---------+
+    '> 5 rows in set (0.01 sec)
+    '>
+    '> mysql> insert into orders values(1,"keyboard",400,4),(2,'mouse',300,4),(3,'monitor',12000,3),(4,'keyboard',400,1),(5,'mousepad',400,4);inhardt',25,'uk'),(5,'betty','doe',28,
+'uae');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ERROR 1005 (HY000): Can't
+ create table 'shop.orders' (errno: 150)
+mysql> create ' at line 1
+mysql>
+mysql> Query OK, 5 rows affected (0.04 sec)
+    -> Records: 5  Duplicates: 0  Warnings: 0
+    ->
+    ->     '> select * from orders;
+    '>     '> /
+    ->     '> /temp
+    '>     '> //
+    ->
+    ->
+    ->
+    ->
+    -> \
+    -> ;
