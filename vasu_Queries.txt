@@ -1,0 +1,79 @@
+1.Write a query to retrieve the customer_id, first_name, and last_name of all customers sorted by customer_id in ascending order.
+
+ans  :  mysql>select customer_id,first_name,last_name from Customers order by customer_id asc;
+
+2.Write a query to retrieve the order_id and item of all orders sorted by order_id in descending order.
+
+ans  : mysql> select order_id,item from Orders order by order_id desc;
+
+3.Write a query to retrieve the shipping_id, status, and customer of all shippings sorted by shipping_id in ascending order.
+
+ans  : mysql> select shipping_id,status,customer_id from shippings order by shipping_id asc;
+
+4.Write a query to retrieve the first_name and last_name of all customers whose first_name starts with 'J'.
+
+ans  : mysql> select * from customers where first_name='j%' and last_name='j%';
+
+5.Write a query to retrieve the item and amount of all orders where the amount is greater than or equal to 100.
+
+ans  : mysql> select item,amount from Orders where amount>=100;
+
+6.Write a query to retrieve the status of all shippings where the status is either 'Shipped' or 'Delivered'.
+
+ans  : mysql> select * from shippings where status='delivered';
+
+7.Write a query to retrieve the first_name, last_name, and age of all customers whose age is between 25 and 35.
+
+ans  : mysql> select first_name,last_name,age from customers where age>25 and age<35;
+
+8.Write a query to retrieve the customer_id, first_name, last_name, and country of all customers from a specific country, e.g., 'USA'.
+
+ans  : mysql> select customer_id,first_name,last_name,country from customers where country='USA';
+
+9.Write a query to retrieve the order_id, item, and amount of all orders where the item contains the word 'book'.
+
+ans  : mysql> select order_id,item,amount from Orders where item='book';
+
+10.Write a query to retrieve the shipping_id, status, and customer of all shippings where the customer is not null.
+
+ans  : mysql> select shipping_id,status,customer from shippings where customer>0;
+
+11.Write a query to retrieve the first_name, last_name, and age of all customers in alphabetical order by last_name, and for customers with the same last_name, sort them by first_name in ascending order.
+
+ans  : mysql> select first_name,last_name,age from customers order by first_name asc,last_name asc;
+
+12.Write a query to retrieve the customer_id, first_name, last_name, and country of all customers from countries other than 'USA' or 'UK'.
+
+ans  : mysql> select * from customers where country!='USA' and country!='UK';
+
+13.Write a query to retrieve the order_id, item, and amount of all orders where the amount is between 50 and 100, inclusive.
+
+ans  : mysql> select order_id,item,amount from Orders where amount>50 and amount<100;
+
+14.Write a query to retrieve the shipping_id, status, and customer of all shippings where the status is not 'Cancelled'.
+
+ans  : mysql> select shipping_id,status,customer from shippings where status!='cancelled'; 
+
+15.Write a query to retrieve the first_name, last_name, and age of the oldest customer.
+
+ans  :mysql> select first_name,last_name,max(age) from customers;
+
+16.Write a query to retrieve the customer_id, first_name, last_name, and country of all customers in descending order by customer_id.
+
+ans  : mysql> select customer_id,first_name,last_name,country from customers order by customer_id desc;
+
+17.Write a query to retrieve the order_id, item, and amount of all orders where the item starts with 'A' and ends with 'Z'.
+
+ans  :mysql> select order_id,item,amount from Orders where name like 'a%' and '%z';
+
+18.Write a query to retrieve the shipping_id, status, and customer of all shippings where the status is 'Pending' and the customer is not null.
+
+ans  : mysql>select shipping_id,status,customer from shippings where status='pending' and customer>0;
+
+19.Write a query to retrieve the first_name, last_name, and age of all customers whose age is not in the range of 20 to 30.
+
+ans  :mysql> select first_name,last_name,age from customers where age<20 and age>30;
+
+20.Write a query to retrieve the customer_id, first_name, last_name, and country of all customers whose country is 'USA' and whose first_name contains the letter 'a'.
+
+ans  : mysql> select customer_id,first_name,last_name,country from customers where country='USA' and first_name like '%a%';
